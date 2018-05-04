@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>1 Prince Benson Fusion Restaurant
+	<title>Prince Benson Meituan</title>
+</head>
+<body>
+
+  <h1>Tasty Treats To Your Door~~~</h1>
+  <p>Bazinga~~~~</p>
+
+  <h2>Here are all our items!</h2>
+ 
+  <!-- item 1-->
+  <p>Hotpot: 5000RMB</p>
+  <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525430345594&di=ccbebf550bac73d199b4d3490c0aa466&imgtype=0&src=http%3A%2F%2Fimgsrc.baidu.com%2Fimage%2Fc0%253Dpixel_huitu%252C0%252C0%252C294%252C40%2Fsign%3D96043a75952f07084b082240805cddf5%2Fb3fb43166d224f4a31765b2902f790529822d118.jpg">
+  <br>
+
+  <!--item 2-->
+  <p>Shaokao: 500RMB</p>
+  <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525430419135&di=35f55bf9546136cb2aaf48eef0ffa3e5&imgtype=0&src=http%3A%2F%2Fs10.sinaimg.cn%2Fmw690%2F001HDQtTgy6FJUAfqxr09%26690">
+
+  <!--item 3-->
+  <p>Dark Food:0.01RMB</p>
+  <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1525430595459&di=652bc12444ab1f8090b89041aadb770d&imgtype=0&src=http%3A%2F%2Fi5.xiachufang.com%2Fimage%2F600%2F32b69c2256c111e4a3f8b8ca3aeed2d7.jpg">
+
+  <!--Order Form-->
+  <h2>Place your Order</h2>
+  <form action="{% url 'meituan:home_page' %}"method="POST">
+        {% csrf_token %}
+        <input type="text" name="item"placeholder="Please Type Your Address"></textarea><br>
+        <input type="submit" value="Place Your Order">
+    </form>
+
+    <!--Show Order-->
+    <h1>Your Order:</h1>
+    <p>item Ordered:{{item}}</p>
+    <p>Delivery Address:{{address}}</p>
+
+ 
+</body>
+</html>
